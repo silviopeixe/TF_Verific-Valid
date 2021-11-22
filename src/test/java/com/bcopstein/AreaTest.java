@@ -32,16 +32,11 @@ public class AreaTest {
 
     public void testaClassifica(int x1, int y1, int x2, int y2, String classificacao){
     Reta reta = new Reta(new Ponto(x1,y1), new Ponto (x2,y2));
-    SituacaoReta sitEsp ;
-    switch (classificacao) {
-        case "TODA_DENTRO":
-            sitEsp = SituacaoReta.TODA_DENTRO;
-        case "TODA_FORA":
-            sitEsp =  SituacaoReta.TODA_FORA;
-        case "INTERSECTA":
-            sitEsp = SituacaoReta.INTERSECTA;
-        default:
-            sitEsp = SituacaoReta.TODA_DENTRO;
+    SituacaoReta sitEsp = switch (classificacao) {
+        case "TODA_DENTRO" -> sitEsp = SituacaoReta.TODA_DENTRO;
+        case "TODA_FORA"   -> sitEsp =  SituacaoReta.TODA_FORA;
+        case "INTERSECTA" -> sitEsp = SituacaoReta.INTERSECTA;
+        default -> sitEsp = SituacaoReta.TODA_DENTRO;
     };
 
     SituacaoReta sitObs = area.classifica(reta);
