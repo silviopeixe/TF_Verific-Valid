@@ -85,24 +85,5 @@ public class AreaTest {
         };
         assertEquals(statusReta, areaAux.classifica(reta));
     }
-
-    @Test
-    public void testa_EqualsPontoFalse_Ponto() {
-        Object object = new Object();
-        assertFalse(pontoSupEsq.equals(object));
-    }
-
-    @Test
-    public void testa_EqualsFalse_Area() {
-        Object object = new Object();
-        assertFalse(areaAux.equals(object));
-    }
-
-    @Test
-    public void testa_EqualsFalse_Reta() {
-        Reta reta = new Reta(new Ponto(3,1), new Ponto(4, 9));
-        Object object = new Object();
-        assertFalse(reta.equals(object));
-    }
     
 }
