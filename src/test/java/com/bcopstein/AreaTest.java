@@ -99,8 +99,8 @@ public class AreaTest {
     }
 
     @Test
-    public void retornarEqualsRetaFalse() {
-        Reta reta = new Reta(new Ponto(2,3), new Ponto(5, 6));
+    public void testa_EqualsFalse_Reta() {
+        Reta reta = new Reta(new Ponto(3,1), new Ponto(4, 9));
         Object object = new Object();
         assertFalse(reta.equals(object));
     }
